@@ -12,6 +12,17 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
+(require '[clj-http.client :as client])
+
+(logging/init {:file "log/riemann.log"})
+
+(tcp-server)
+(ws-server)
+
+;; default tracker url and params
+(def tracker-url "http://xxx.com/someMethod?creatorKey=xxx")
+(def external-monitor-id-map {"totak-task-id" "1000001", "master-restarted-id" "1000002", "low-slave-active-id" "1000003", "high-cpus-percent-id" "1000004", "high-mem-percent-id" "1000005", "tasks-lost-id" "1000006",})
+(def base-params {})
 
 ;; default emailer uses localhost
 (def email (mailer))
@@ -32,12 +43,24 @@
                                             #(warn "Host failing too many tasks:" %)
                                             (throttle 1 900
                                                       #(warn "Emailing administration about task black hole." %)
-                                                      (email "foo@example.com")))))))))
+                                                      (client/post tracker-url
+                                                      {:form-params (conj base-params 
+                                                                     {"title" "The mesos may occur task black hole", 
+                                                                     "detail" "Check service of mesos/slave/total-tasks% for more info",
+                                                                     "external_monitor_id" (get external-monitor-id-map "totak-task-id"),
+                                                                     "occur_time" (System/currentTimeMillis)})})))))))))
+
+;; this stream need test
+;;(def tracker-stream
+;;  (client/get tracker-url
+;;        {:query-params (fn [title detail] (conj base-params {"title" title, "detail" detail}))}))
 
 (streams
  indx
  (where (service #"satellite.*")
         prn)
+  (where (service #"mesos.*")
+        #(info %))
  (where (service #"mesos/slave.*")
         prn
         ;; if a host/service pair changes state, update global state
@@ -66,8 +89,62 @@
             (moving-time-window (:blackhole-check-seconds satellite.core/settings)
                                 task-totals-time-stream)))
 
- ;; if less than 70% of hosts registered with mesos are
- ;; on the whitelist, alert with an email
- (where (and (service #"mesos/prop-available-hosts")
-             (< metric 0.7))
-        (email "foo@example.com")))
+;; mesos master is restarted
+(where (and (service #"mesos/master/uptime_secs")
+             (< metric 60))
+        #(warn "mesos master has been restarted recently:" %)
+        (throttle 1 3600
+                (fn [event] (client/post tracker-url 
+                                 {:form-params (conj base-params 
+                                               {"title" "Mesos master has been restarted recently", 
+                                               "detail" (apply str "In recent 60s, mesos master has been restarted, the host is " (get event :host)),
+                                               "external_monitor_id" (get external-monitor-id-map "master-restarted-id"),
+                                               "occur_time" (System/currentTimeMillis)})}))))
+
+(where (and (service #"mesos/master/slaves_active")
+             (< metric 3))
+        #(warn "mesos slaves_active is low:" %)
+        (throttle 3 3600
+                (client/post tracker-url
+                    {:form-params (conj base-params 
+                                               {"title" "The master/slaves_active is low", 
+                                               "detail" "slaves_active is less than 3",
+                                               "external_monitor_id" (get external-monitor-id-map "low-slave-active-id"),
+                                               "occur_time" (System/currentTimeMillis)})})))
+
+;; master/cpus_percent > 0.9 for sustained periods of time
+(where (and (service #"mesos/master/cpus_percent")
+             (> metric 0.9))
+        #(warn "master/cpus_percent > 0.9 for sustained periods of time:" %)
+        (throttle 3 3600
+               (client/post tracker-url
+                    {:form-params (conj base-params 
+                                               {"title" "The master/cpus_percent > 0.9 for sustained periods of time", 
+                                               "detail" "Cluster CPU utilization is close to capacity",
+                                               "external_monitor_id" (get external-monitor-id-map "high-cpus-percent-id"),
+                                               "occur_time" (System/currentTimeMillis)})})))
+
+;; master/mem_percent > 0.9 for sustained periods of time
+(where (and (service #"mesos/master/mem_percent")
+             (> metric 0.9))
+        #(warn "master/mem_percent > 0.9 for sustained periods of time:" %)
+        (throttle 3 3600
+            (client/post tracker-url
+                    {:form-params (conj base-params 
+                                               {"title" "The master/mem_percent > 0.9 for sustained periods of time", 
+                                               "detail" "Cluster memory utilization is close to capacity",
+                                               "external_monitor_id" (get external-monitor-id-map "high-mem-percent-id"),
+                                               "occur_time" (System/currentTimeMillis)})})))
+
+;; master/tasks_lost is increasing
+(where (service #"mesos/master/tasks_lost")
+        #(warn "master/tasks_lost is increasing:" %)
+        (changed :metric
+            (throttle 3 3600
+                (fn [event] (client/post tracker-url 
+                                 {:form-params (conj base-params 
+                                               {"title" "The master/tasks_lost is increasing", 
+                                               "detail" (apply str "The master/tasks_lost is increasing, the metric is " (get event :metric)),
+                                               "external_monitor_id" (get external-monitor-id-map "tasks-lost-id"),
+                                               "occur_time" (System/currentTimeMillis)})}))))))
+
