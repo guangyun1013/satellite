@@ -21,3 +21,8 @@ sat_master3 ansible_ssh_host=10.10.10.3 ansible_ssh_user=myuser
 sat_slave1 ansible_ssh_host=10.10.10.4 ansible_ssh_user=myuser
 sat_slave2 ansible_ssh_host=10.10.10.5 ansible_ssh_user=myuser
 sat_slave3 ansible_ssh_host=10.10.10.6 ansible_ssh_user=myuser
+
+[zookeepers]
+10.10.10.7
+10.10.10.8
+10.10.10.9
