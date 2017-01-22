@@ -21,6 +21,8 @@
     master_config_template: satellite-master-config.clj.j2
     master_settings_template: satellite-master-settings.json.j2
     riemann_config_file: "{{ master_source_dir }}/config/riemann-config.clj"
+    zk_hosts: "{{ groups['zookeepers'] }}"
+    zk_client_port: 2181
   roles:
     - lein
     - satellite_master
