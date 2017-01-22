@@ -26,3 +26,6 @@ sat_slave3 ansible_ssh_host=10.10.10.6 ansible_ssh_user=myuser
 10.10.10.7
 10.10.10.8
 10.10.10.9
+
+[riemann-dash_hosts]
+riemann-dash1 ansible_ssh_host=10.10.10.10 ansible_ssh_user=myuser

@@ -38,3 +38,11 @@
     recipes_script: "{{ slave_source_dir }}/bin/satellite-recipes"
   roles:
     - satellite_slave
+
+- hosts: riemann-dash_hosts
+  gather_facts: false
+  vars:
+    riemann_base_dir: /usr/local/satellite
+    dash_config_template: riemann-dash.config.rb.j2
+  roles:
+    - riemann-dash

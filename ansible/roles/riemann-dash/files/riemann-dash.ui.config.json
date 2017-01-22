@@ -1,0 +1,3537 @@
+{
+  "server": "10.255.255.148:5556",
+  "server_type": "ws",
+  "workspaces": [
+    {
+      "name": "Mesos Overview",
+      "view": {
+        "type": "Balloon",
+        "weight": 1,
+        "id": "758a41fd726b4f5fed10b4727784e29902e64cb9",
+        "version": 228,
+        "child": {
+          "type": "VStack",
+          "weight": 1,
+          "id": "157bfb0e946c86b0b16d5a443a496db2f9f87b44",
+          "version": 228,
+          "children": [
+            {
+              "type": "HStack",
+              "weight": 1,
+              "id": "1e4eb1249e85f50b05c3b34c96185cb904844f07",
+              "version": 129,
+              "children": [
+                {
+                  "type": "Flot",
+                  "weight": 2,
+                  "id": "62ba54f7c00b7d642da8e92f1385161e44d11248",
+                  "version": 75,
+                  "title": "cpus total/used",
+                  "query": "(service =~ \"mesos/%/cpus_total\")\r\nor\r\n(service =~ \"mesos/%/cpus_used\")",
+                  "min": null,
+                  "max": null,
+                  "timeRange": 300,
+                  "graphType": "bar",
+                  "stackMode": "false",
+                  "tooltips": "metric"
+                },
+                {
+                  "type": "Flot",
+                  "weight": 2,
+                  "id": "95e4c2697800fb341d89eec21eef5576256a4230",
+                  "version": 6,
+                  "title": "cpus percent",
+                  "query": "service =~ \"mesos/%cpus_%percent\"",
+                  "min": null,
+                  "max": null,
+                  "timeRange": 300,
+                  "graphType": "line",
+                  "stackMode": "false",
+                  "tooltips": "metric"
+                },
+                {
+                  "type": "Flot",
+                  "weight": 2,
+                  "id": "ac78fd1683bff32b176ae33b3ab0d19ea5043631",
+                  "version": 7,
+                  "title": "cpus revocable",
+                  "query": "service =~ \"mesos/%cpus_revocable%\"",
+                  "min": null,
+                  "max": null,
+                  "timeRange": 300,
+                  "graphType": "line",
+                  "stackMode": "false",
+                  "tooltips": "metric"
+                },
+                {
+                  "type": "View",
+                  "weight": 1,
+                  "id": "f7312184efe9d87523bbfbb23090e0cc59c6e92b",
+                  "version": 0
+                },
+                {
+                  "type": "View",
+                  "weight": 1,
+                  "id": "50f2f3d4259c834333f3f36ccbb58ada5d8ca1ff",
+                  "version": 0
+                }
+              ]
+            },
+            {
+              "type": "Flot",
+              "weight": 1,
+              "id": "d0e4a0c55f5163f19cc598bbc69c28f8641046f1",
+              "version": 53,
+              "title": "memory/bytes",
+              "query": "service =~ \"mesos/system/mem_%\"",
+              "min": null,
+              "max": null,
+              "timeRange": 300,
+              "graphType": "line",
+              "stackMode": "true",
+              "tooltips": "metric"
+            }
+          ]
+        }
+      },
+      "id": "29fe3d7db5f045397b78af8a5ce8231a24012add"
+    },
+    {
+      "name": "Mesos Tasks",
+      "view": {
+        "type": "Balloon",
+        "weight": 1,
+        "id": "e00c1c56a872a594dfdeee84606fbc2b537b2dd0",
+        "version": 157,
+        "child": {
+          "type": "VStack",
+          "weight": 1,
+          "id": "9016d4bc54da36ef066c10df8e26ebcee7719cdb",
+          "version": 157,
+          "children": [
+            {
+              "type": "HStack",
+              "weight": 1,
+              "id": "7dbe82130da89b0ebd4edcf73fb6420fb1201c36",
+              "version": 125,
+              "children": [
+                {
+                  "type": "VStack",
+                  "weight": 1,
+                  "id": "4fc959c4d2a3d2ba6266e079bda1940817412c22",
+                  "version": 124,
+                  "children": [
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "93351ddfd18e068058cc09134efb73cef156de4a",
+                      "version": 117,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 4,
+                          "id": "30801f149eb5a13db4bcf1d8da096d44dbd9a0ef",
+                          "version": 49,
+                          "children": [
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3fd717478d51c9f09aebbe5589311b9b35d60a60",
+                              "version": 0
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 4096,
+                              "id": "ea6252348dcb3bc393bb7ee35fe5ad8d9e208797",
+                              "version": 35,
+                              "children": [
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "ffda968a3ad7903a0a8a0abc4175a3d46f87c66d",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "e9abbc407b3607a60cad50ebba61403257bbc347",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "d2f9fa4a1864a2e3fcb888128fd3d7e3f50516aa",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "a0307c5090ffe6754ba8ed46f46acbf8a946b5ec",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "f2964ac0c0f44b501ab8913b978ac8f38f15422f",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "09aacb25c753fc43ea1a17b060307f7d42624277",
+                                  "version": 0
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "2eaf9a0de490f2da461326a987e78f7d484b91d8",
+                          "version": 57,
+                          "children": [
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f9e6594e31e8745b67f9e6f3efb9f1980012bf6d",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4a6b9328a443d414c495bc104228953b7637a6ab",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "562d9a6de3bba7e2dbb8c41e337e32c8c4166a42",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6a6eeff6f3a35293dd0232f7b710dc0846570420",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8a35841c1e109c31637384bcf64b71cac679ddbe",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8ae4cc2ec78028a4acdddd0edfe0833d1dc37890",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "917c128cb8f90e32a641651a7dbdbb22d9e3f2fd",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8c36d0a6c488f6e08e98e3d9c87b888dcdd5066d",
+                              "version": 0
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 4194304,
+                              "id": "84ff6538661d616f6cb5f7341158ab63f95849e4",
+                              "version": 16,
+                              "children": [
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "d41a8541151db15bd57786bbeb27ff8ff425e39c",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f769356e24bd866744822d41df6c7a8e8f498ea3",
+                              "version": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Gauge",
+                      "weight": 32,
+                      "id": "2a09fc6e318efdc429074e21989d689df3407be9",
+                      "version": 6,
+                      "title": "lost tasks",
+                      "query": "service = \"mesos/master/tasks_lost\""
+                    }
+                  ]
+                },
+                {
+                  "type": "Gauge",
+                  "weight": 1,
+                  "id": "e7d7706e971ade142082e0ee5968d7cdb92bc258",
+                  "version": 1,
+                  "title": "running tasks",
+                  "query": "service = \"mesos/master/tasks_running\""
+                },
+                {
+                  "type": "View",
+                  "weight": 1,
+                  "id": "d290a28cdc00cae8c2d746c8bc81a99d4f985712",
+                  "version": 0
+                },
+                {
+                  "type": "View",
+                  "weight": 1,
+                  "id": "52d259e4ed30e38c68cd866b787f774a97ad3328",
+                  "version": 0
+                },
+                {
+                  "type": "View",
+                  "weight": 1,
+                  "id": "9137d18a1276d3a85a2696c33dfcfd0e3db6a8e5",
+                  "version": 0
+                }
+              ]
+            },
+            {
+              "type": "Flot",
+              "weight": 2,
+              "id": "769386dcca22595576194f356a890d8f29238489",
+              "version": 9,
+              "title": "tasks",
+              "query": "service =~ \"mesos/master/tasks_%\"",
+              "min": null,
+              "max": null,
+              "timeRange": 3000,
+              "graphType": "line",
+              "stackMode": "false",
+              "tooltips": "metric"
+            },
+            {
+              "type": "View",
+              "weight": 1,
+              "id": "0811d1fbfcf3616e02395dcbc91a69c1bd2f96ea",
+              "version": 0
+            },
+            {
+              "type": "View",
+              "weight": 1,
+              "id": "ac84f487a17a29426e6dbd7e2fd4babde273f188",
+              "version": 0
+            }
+          ]
+        }
+      },
+      "id": "e44e4d248eaaa9ff1de98198a17929d8a05316f2"
+    },
+    {
+      "name": "Mesos Resource",
+      "view": {
+        "type": "Balloon",
+        "weight": 1,
+        "id": "3fdf6fdc3201f7cf6a24cd9d888edea49fee9924",
+        "version": 1401,
+        "child": {
+          "type": "VStack",
+          "weight": 1,
+          "id": "c99e81d39fdad074a6ce184763e8424eb3637df9",
+          "version": 1401,
+          "children": [
+            {
+              "type": "HStack",
+              "weight": 0.00390625,
+              "id": "b3c9a4fd9b5ee3f062c64103e03dda0040c644c8",
+              "version": 1376,
+              "children": [
+                {
+                  "type": "VStack",
+                  "weight": 1,
+                  "id": "a503f0b19b9fc5d4c99b9c0f38965bc45e04c7ab",
+                  "version": 924,
+                  "children": [
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "3a5cf5a37b49fc753f390d5893e8f30a4ceec3ef",
+                      "version": 923,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "d54c70417565883722ba659d2d54b5b9345a2889",
+                          "version": 556,
+                          "children": [
+                            {
+                              "type": "Title",
+                              "weight": 32,
+                              "id": "e775aa15f95803554f50c64a77020928cc8d7893",
+                              "version": 16,
+                              "title": "Slave"
+                            },
+                            {
+                              "type": "Gauge",
+                              "weight": 32,
+                              "id": "20be51ab14671a3ec33fc5c8d019fbcec5fbef6f",
+                              "version": 71,
+                              "title": "active slaves",
+                              "query": "service = \"mesos/master/slaves_active\""
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 1,
+                              "id": "0eeb1a326b6a10198f271530930999138ce335bc",
+                              "version": 456,
+                              "children": [
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "3f7bb2094395176f2e0d8a65e976e75de49a763b",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "1e52c7c1ac73da9323b52a0a63facddb9d453a51",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "e166205e2871c36ed5721e9350a67e741b662c9a",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "4239dee95e85325349ab8726ec24ecdd4a3fb1b5",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "VStack",
+                                  "weight": 64,
+                                  "id": "9f935218eec8fc3cab7151f121aa4e65de1d291e",
+                                  "version": 338,
+                                  "children": [
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "690edfed8c0a4bf41be098b81e7a7c536553ba60",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "cb9ae975ab572ee1950aa1cae840369a2e170be3",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "16fdd15aeced4f6eb37c160bba0b6b3c1265f3de",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "983b587c7a688acb10fdf1dd8104c1a3baa14546",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a6f05a4fe26f5cf67b249e98c536ba07bb2fdf26",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ad10fecf12806903472bcc681c54050214ee0b22",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "395d6eef195735d9f1850473e7f43d9c2c1de1c1",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "526b24e727857af9847f2783822081b9cc8659a6",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "01e3849200629890b871fd5b5cc4e0cb4fe2a717",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "363136057c4024cfe97a2158990cba7efaf4cfef",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "fea4a840923e981d64f80b27df925fb3da0f08e1",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "0fc8928f07907da9aeeda045d0180ab89e73fab5",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "286af8f1b9e69282e6fd1ffbfcd2072999b3b86b",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "184e1b0f51aa058fb470fbcc5d3cbf077e257ccf",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "6002e68d102605d620b7afa385c4181e40c70f75",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4ff8f9db480d7a6f21dcbc4c89220f3c9a3c066e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "0a5ef3f7d8e98e07b8dbd704e02b2ab68156f482",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "1eb6cfd566cc1055e522b39bb6c3735d78641084",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "6cf57db77a791be910c05f386f087e6fe2ce7e6b",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "8a347fba2091782b89e7a6c059b17b360e20dccc",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "7807d5fcf1aec5592d0886ddba81b7b3eab41c5e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "84eb7c30d1aed1363df35615ee3875983bebd3e3",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "1f3c64cf90988bcb116eb4c5f752ac089951c966",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "baea46484c0f6726ad6efc177245a83c3f52473f",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "c6a0fc9241480ea4a506dc5e0e23986a6968e152",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4fc0bfb7318e795535c09623003e1a7147e26296",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "e92f353707ea84e2d0e368e2355d3b9b8ce2f374",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "872b90f6a4466e73f6e238769fd20db72c24ed60",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4f4f03494a21a7981c50bdf5da689b9030588507",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4d60243ccecfb59de7a47381da210eda1d9b3d32",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "6050813e0847153b283d7f74b3e72aeb7215a213",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "aa5607cdacbda3f75bbf75af2fe3283a630e2503",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "dfdebad626433da43283889527f708802c08d46d",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "88d4c35f59bce4425bcfba1a57af153e3fe26abb",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "37635c724e12dc448afe77ad16bfde68bcdb40d4",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "05d4f068005891709c68128d68cf9a36f6243251",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "b738f465a835a26ba599f8636ae276215231e20e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "496f1a00d4d1dbcae4689d97cf29d533228e4490",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "56e6681afc67375386844085d34657291a527f16",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "e2743d85250ac497a342001c91ec15963e978468",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a7fa31d2f64cb13918c6a54f0b68e6144afa8ae6",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "37c2034ab7f1b23d142ed90a9f69ae944bd9eb14",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "9961cce8c8b421dd25db4dc2f84dd3c14cce30c1",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "f26dccd8d6160fedfc72aa5e967db9800f8fa117",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "21ad10a5e113a9b255133f42e1ad7453a1e54613",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "801f13bc5112c220b223dbb440ffb89fcba95dfe",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "049f347247ec602fb628e3cf8e6fb1fd03d0be87",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "479f4aca3988ae85d71e7cbc0dc0ff30f93afb59",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4f5ea475d1ca37f9bfd0debae506660ef839b1e6",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "cb4cffcac20bf1991b980a00e3e5993058475fd7",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "415a9511b352cd2a4e376e1c37cfc9d73145d2d9",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "9bb0dfdcfec08d0a7f62565e11acd389cf8457bf",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "dd402ab3f61e8adf127d8b088ba9539adb7f72ed",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ae757322d93f0baeedefd620f142b811cd687f8d",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "8e188a1298ced066aaea75db6ad0aab6f75dcfe5",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "39d76e34010dd0c8a3677c0e090a58d0839894c7",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "0d46427c5de565e85e882317969b89b7249eb2c9",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "39d15f1b812fa25d4d8c909dc6c80c403628fc23",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "8a1808f99f4eb8841d34b7fe0b342d5127a1c2c1",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4be4d3ef125a7983e1c67605d8944eb13f0fb905",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ede80ae5bb2855cc5055c8a78427a844e6039e64",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "1774f14fa146749a963be69096b4aabda83b1bc0",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "2fb960aecb2ccad82bbc0f041c4b81160f5006db",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "52f07164c97299ecb3819a0a6550c5f69e43253c",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "657da66d79126fe03ed6ac88ae871953d990d690",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "0d53e8cbf02446a09b3b267332f0207494807b8c",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "2abe8dd111e395dc09e2eb1b06d48ba494f8a17d",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "b38fa3ccaf159013b97de89c51b7c621032aa230",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "7e23201a0f02f5202343cf18582010118dc5b5be",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "e47a6c128e91eb28179738dc2b2f9f2ee645860d",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "2cfda5836a80a6e7da38f77099ca7f2f9c169434",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ab842b8aaf5e91fca8a72a7b764f99abe8979fc8",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "4b2ef55f6aa9744bea3a22a665b59edeb29f0f67",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "5b52a70198a3823e7820c7ffc3b2a1d68d63f506",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "24f534b67b0ad2c279ec8c1f9d1f450efca3ee88",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "561dbb7a1f3fe32eb527f7af03b6c13411d27675",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a8df8c3cf9e27bcfbdcb4559cc5cf4d6b569170f",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "275feb4ca90861efe734c9a9e4908c408e49b457",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a567447a7987f678d6ce2e3000d676da1fc68755",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ce91597735a1bb1c4b837936acbbe5205f843be1",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "55aa3015e73f6dd1d28949b21ba17c6d43db9464",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "67332921fd71c3bfa31df4a0f6cb5cdcf79df919",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ae613e466d7debef91d0e52ea92e199dc4b5d435",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "def25a7ac56ff8c083b22394540519c2706ba9d5",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "c2dd18429e0f161fd41b079cd8de139bfeef0589",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "09e315ec880340aef2f86c4137927ea8056d2158",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "7a016eea79d1f2a0b71b49f8e6ecd9f3877438bf",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a9a36aef507023db2b3433fdf01847b91e88f19c",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "32ab3423e95a2a4f0587313942a228be79f93d1b",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "10a649ca5ae040af147f1ec304ab7b9c5d977b74",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "9027edc42abd5500711eeb4159a3c9d7fa34027e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a59e2e6970ae16a365d7c51882e6b47923bdca9b",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "6e5e9b7e86e9928369e7b6d184f7b5806b637eb3",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "be839d87291bc0754eb85d21abce1ec0480f6d9e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "HStack",
+                                      "weight": 16,
+                                      "id": "77dfc44cb2b364f551e1dad241bbf9e3f7d1f839",
+                                      "version": 132,
+                                      "children": [
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "8b7f6c7f97b41e1576c5ca9cfe4c6ba57508e9b9",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "20976b17f56ea512cd18fe8bc3d6da04a10ea54d",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "15b398aa317508474da2ed97fb42d3b8974ac7d8",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "c67512a9691970951d23d7ddd65ff5090e2fe853",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "b3343c78834bb46994b8114da92aa561c25646ce",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "ad410111c0c04174f972f60272701e70af80a823",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "014ee5a675f6fce621b111db715a130b7a689e8f",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "36d7f80284b2ec433736f5833af0bb45485e3de1",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "84b8f36789c8b20e6cb898f139bc3cebf34eaff5",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "f4ae1a499eeb92352267e5228ec0a1eb05042eac",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "bb9f550c1228b41c858471369ab0fc779efddbba",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "4d3736fef321b0ac12b39a513fae3d03128f6ff3",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "767ce224c1c711bad6a22e98267acda6a14e8e78",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "14abd7bd796865c2a166a559465b001478eec7c0",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "8e4a760e342eb320ed4273e9b8262517eb6b9382",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "b2f5f968770437b8030dc2e5faee136242b5ad45",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "b28401b1a42125caefb0a1e4c3bed514a372ac25",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "9a75b8d6341b3f857a3e6190f6da84a66bff6cdc",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "9cd659d2b183e0ff2c9d0473c94e31a0d603ab97",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "e49e639cbc74fa5fa2251fbe4b0d430b00bc73e8",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "8307d73214cd00e73bdedcf12daf5311a669defb",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "6dfd089f7a1d4070d03d8c1b893f1d2f3ad15048",
+                                          "version": 0
+                                        },
+                                        {
+                                          "type": "View",
+                                          "weight": 1,
+                                          "id": "82cb9705deeb2821a88ae9affc78df08d6f30b45",
+                                          "version": 0
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "d54788944f365ca1c7051f1382bbd296e2edc1c9",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "e61ee0c2764c29d657d6f3932b77a137bae22248",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "08e972f6d7d16b2d3e367c8d271055f409bd505e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "38e1b826f4f96e357cb56bf9304a16f15cb3a278",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "52478859f61bf0e0f6211d97edb84987e17da512",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "a8994cca8cde5a133f2eebb1854623a867cbc70e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "7361dfb54abff28048b10687a1546951780368e5",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "226b9f74999906963d08190e6b7153b8a633cdb9",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "22822534a69996033399913ccf6b048f3fcf0a86",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "9fed0ec05323e531b4db790a0b080bb00831c26a",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "0f485f9cc868e22f08bdad3f142e2f4b238017eb",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "e3568d0b86d91ecb6611f9e7250ac408922ce40c",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "08b3e1825e7d0b47a985371a04457a4b1d219851",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "261107f091cbb154eccd49ae35badff927d845fc",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "cdc5c08ec182598c93e8569f93dc85c63ecd9a72",
+                                      "version": 0
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "ac009bca9c1e1d021c51a9a6933b07ae317ab1d7",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "891d4d3785f874485579276111681c9d814cc5e5",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "65e46bbf21ebf7121530534ecf8372766f8a5219",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "19dd4e50f418300e0a56ffe4971e38dcb832a7f3",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "09f2c3a60588c5896aba386aab278b1117a9d3a0",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "b5163d95bad9bd8484dea4d5195ffd084a4ad038",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "f63afc32a5a4b269d63364fdd85c898d14adbdbd",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "0d0dcced6ee441f4f6a769f1486d0a0843e83bca",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "90d895eb371bb8aaca446556583d4648c8baf2a7",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "4303cb7e78c58b04bdb36e701b1e9ba1ae265b44",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 4,
+                                  "id": "d3cc23cd66474ac1a201774a488d10ce7f63c7f6",
+                                  "version": 21
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "efb93ec4ae05d14b45045258230de62bca3f8439",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "191b9ebc4f65ca9b931cf48198d79ee72eda1051",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "fc5f810fd43a8482882b9c7ac6a78c10f652bc06",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "9ddc16f98f6cbfabf354ec9057f5e6d493cb0dd9",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "0b1ad73479a4ff1d519387b78bfe4f557b9d784c",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "ab129e734d15b3a15413911142a89b665a5a0707",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "497b6527e343705306492bcdce7b0858de5b242c",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "4488e3fdf82a24b4b374169865fd45afbb173a17",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "2e1405f5b6ff7021fe5e85a08f95cb1d2a516d07",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "592de8c8154afa77f6645ff732920c3ec82d23e9",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "66bc146297b461745870e25993ed0e38726267b9",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4e7071820016c3e9e8c35685c6f71fa6df9fb7f0",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1033c8a2380c19f1b895207f296a88b0bfb4bbd0",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "5d4a6e228b5680a7f8cecd94ad2dd41b18b16d35",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8e6fcd02725c68796fa56fdc8b153d8e70fb143e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "d43b10ac81e37c85805626780c89fab3508c80b5",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "2dcf76c027681589199efe860b10485bab1ae48a",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3e270a1831a239a8907286561e4a531513823128",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ad5903198a896b4f5e1fa1dcc1d29917eaecaad6",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8223e3efc1f13635f064d533fc684f00e1a00aa3",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c11de8580053e9bcf878fe22508ebfff99532dd9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "17de99f961c8d8029c8cf3b4cbcd9b4f0ac06bdf",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "51c7075702945432947374c817c260c3c451d27b",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "090bd30b59a9eda8bb91e480f1fc7102b976a5e2",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8d0ed4c23772c8f808f301b71d8eccb3d188d126",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "9fa3de3bc0db7991180a03d5c06923a427fee126",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6303b8289217da4d2ea479a5da893ce351b3a9d5",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "eba23eabefbe81a9a8c9a30304a80e3b211774f5",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "899bbab9b3f72abf19497597cb823af489494e3a",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "485ec19fa8cb4d90c1b9d80ee50fa3ce0b2805e6",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "80abcbc6f587639d6c23b0ca81ecd3f7ee932204",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1121068f08bec3809815d4cc40cd3d349bf775e9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "886c5e192c693be19d18015839a025ec5dd61a0e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "a52d01ea40c9e3f94363eddc5579e7b2787477a8",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "83ebe112f120e42a725c04ca53c614d9ce7bef1c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "06679e359fe0ddf1ffbe14d23df9b6093c9f3e0e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "68a103c5b4e3c1d54ff6822737791f70c4024153",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f508bb4d7758e2bf92cce4d44555b5c5f5d4507b",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "9c5476ae4c2264fdcdfcdd79333b0d2a08337c49",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4cee57108a8abb25ce0cece08c63ae616de539a1",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "017063094081ae81f93c08dd54d551ac5ab21fec",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "50e94888b96757b5395ef6612b44d71c1754d035",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ee6dcea1481bc06bd65b0280ba5358f98fce1f09",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "33360146ece71cf5c83a7c4850a76a62e6a536d7",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4928ca9910422413ab3cf383aeee0229b2ee0a48",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "a85d972d3249a49b5333c6606c1abe5d710c4ddb",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "594acb78f18a582319891d019879e49aec229cf1",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6392c8586a742cf8f0cf14ab1d2ba53c586017dd",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "479e0452aaef60c10b28efab992e4639db2a86fb",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "9e0352b43de5505a2cf7fd88550f001582ef4852",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "10f9f5c4c690bbb792f42639a166b916db440717",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "e5ce9af9c7c3ede3e941b0f03985ad4683341051",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "18c1025d280cbe65e484900c4c50b44c89158622",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c6f97ae1991a68367632a0280b0d1e96c151d9db",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "377056471d539d76c4c1c615ad568d1ad3dd7159",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "e1353a42e04a2afdf4fbd8ae2b057c6c2f4cb114",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "a781fc5e688610a8ce5973eb6ed6e952ecea1ea0",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "59fb975cc02d2eb383054a299168518f9cab5173",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "b14b6b9b8e74a9d7cc4464791789854c355df016",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4282344da5717641461bc0f249036ce8a8140316",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "2d5b9bc7331b0afd6bc7317b02db5d5f828f4661",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "cba14570584edb70ec3d7d9b54a2bf60df8cf7db",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8e7da87b7dd8d9dc73bfe82cb4e0f1408d33615d",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c607fddcdbdfd74b6ff2113012abd53971e0e15c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "28b6a3bc2f8ae981ec73edc7140cdd01e0123ccf",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "864a68c9c00a2932c36b3016ec5089c49b024487",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4e7f4831e11ad0e84d2c9f6a76f9e635e0079924",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "fd12837f8fe3fb57f41ee4800f503014565b0b58",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "924e09d8af9b4a046cdce54b461b80ae766f9b7c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3f39ec2593930ef13b4534f4729833829b306d36",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "e39de3bee5a7c203bb699b73790c51dbcfbb2189",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "63107db0813e271729460431e334301795e17bce",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "5cb8f192b960466eed74b0f6f21bce2cd5e694db",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "9e2e531038842df081eb79748aaf6ed472692f34",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4be4042afd4adbc90d597209327779a02e9ce0e6",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "484729c978c1826d099300157172fab5b4cb5cec",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "8bbb2e6c1ed3b7546d2844bf1394b9a6ecee13b9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "adbc835e5f97f828ba73b07a1a394a85de57b2d7",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "215334dff328f73648912a4ece58a84cc52c9cfd",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "abe9e643db1d7a31deace1e1ec0a684d9c472c44",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "bdf53e279d1987b74d0e78fbb43559242fe00278",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "aa8ccc3bee65e1506f4ebfce70cb7b78aaae2d61",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "deb9d86ae484d9cbfc4b4067060ccceec149c927",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "950de2cfc202c31f70cec5b2c7e5d582f84f0131",
+                              "version": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "6399565cb3d51dc75a519ee803a2f4772c6a43fa",
+                          "version": 365,
+                          "children": [
+                            {
+                              "type": "Title",
+                              "weight": 1,
+                              "id": "15779e782b0f03fa215de9b9fac14fae6df3f403",
+                              "version": 2,
+                              "title": "CPU"
+                            },
+                            {
+                              "type": "Gauge",
+                              "weight": 1,
+                              "id": "3303cc82de0a36eeece14b49c65cecf6d68eeeb9",
+                              "version": 3,
+                              "title": "total cpus",
+                              "query": "service = \"mesos/master/cpus_total\""
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 1,
+                              "id": "2e8a169ef9ccb8bd1a0c51a798a1311bbe36b744",
+                              "version": 15,
+                              "children": [
+                                {
+                                  "type": "Gauge",
+                                  "weight": 64,
+                                  "id": "7d211e407d4482ce64a711024d5950c476c3ccd1",
+                                  "version": 16,
+                                  "title": "used cpus",
+                                  "query": "service = \"mesos/master/cpus_used\""
+                                },
+                                {
+                                  "type": "Gauge",
+                                  "weight": 64,
+                                  "id": "50c55fc2c525f51a25a1300f45c297226ea8324e",
+                                  "version": 20,
+                                  "title": "used percent",
+                                  "query": "service = \"mesos/master/cpus_percent\""
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "569d937a52d69e029e57d3ad1f183cc019d89804",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 0.5,
+                              "id": "a5275432aea1a99d93103117c24530ed0d0c0da9",
+                              "version": 320,
+                              "children": [
+                                {
+                                  "type": "VStack",
+                                  "weight": 8192,
+                                  "id": "e227880c48fdda1d215894e0d69c6a23c1a92ecb",
+                                  "version": 300,
+                                  "children": [
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "5d816a4782e5988c83e8e6c69ae6b2423e17263e",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "7220374f3ee2f831a6dfcbe2089bd43c23100387",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "70b47bce619fdd9dd4747a30171a38015f4f8afd",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "HStack",
+                                      "weight": 32768,
+                                      "id": "dfc386c008fa9ac05696ad260ef94a4e510fc93a",
+                                      "version": 279,
+                                      "children": [
+                                        {
+                                          "type": "VStack",
+                                          "weight": 1,
+                                          "id": "0f0ac40f1a89b0f678a1e79f8d3e6abcd02cbf95",
+                                          "version": 258,
+                                          "children": [
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "987d4096ba67bc7197d274935b0b8d805ee10db6",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "4aa7a521ad5bbdd349373d101c00f715c3ee00c5",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "ebb9d2a59dfa7eb109101a92ebf19faf1fffc3b9",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "7b51f43912fdc8cddfedd71dafc25d0ad0f89d75",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "db0f383812f451de69becbbd31716f4eb190d64e",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "adfa8693334aad77bc39cae4f6fade4640329b6f",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "HStack",
+                                              "weight": 1024,
+                                              "id": "768011891cdf9a8182f3502153782ee6ea7a66c3",
+                                              "version": 141,
+                                              "children": [
+                                                {
+                                                  "type": "View",
+                                                  "weight": 1,
+                                                  "id": "9508096c661fce7d7e0fdeb764abaf758e0a6d81",
+                                                  "version": 0
+                                                },
+                                                {
+                                                  "type": "View",
+                                                  "weight": 1,
+                                                  "id": "e0f65e9a564634c25a05566589a9851787062966",
+                                                  "version": 0
+                                                },
+                                                {
+                                                  "type": "View",
+                                                  "weight": 1,
+                                                  "id": "719faa8de2e878cae0e43540d2130782bf54c711",
+                                                  "version": 0
+                                                },
+                                                {
+                                                  "type": "View",
+                                                  "weight": 1,
+                                                  "id": "fe485b9d62facf7657d8b45c3239a864addfff6d",
+                                                  "version": 0
+                                                },
+                                                {
+                                                  "type": "View",
+                                                  "weight": 1,
+                                                  "id": "e3fd3d73840af247750a0a9d855ea5378d7d285e",
+                                                  "version": 0
+                                                },
+                                                {
+                                                  "type": "VStack",
+                                                  "weight": 1099511627776,
+                                                  "id": "3541c4bc76937956fa71cbd7b995deee337ebada",
+                                                  "version": 100,
+                                                  "children": [
+                                                    {
+                                                      "type": "View",
+                                                      "weight": 1,
+                                                      "id": "7819d10165f2862a6778c8f74ee568b2c382f9dd",
+                                                      "version": 0
+                                                    },
+                                                    {
+                                                      "type": "HStack",
+                                                      "weight": 1024,
+                                                      "id": "0bf598e19c10cead3fec323f534494d49ad2ab32",
+                                                      "version": 66,
+                                                      "children": [
+                                                        {
+                                                          "type": "View",
+                                                          "weight": 1,
+                                                          "id": "3b03b442e040d7fbea3824acfe57e4c2f5047ba6",
+                                                          "version": 0
+                                                        },
+                                                        {
+                                                          "type": "View",
+                                                          "weight": 1,
+                                                          "id": "3a3f9ffddcf442437871c158a9235bd7faf62b33",
+                                                          "version": 0
+                                                        },
+                                                        {
+                                                          "type": "View",
+                                                          "weight": 1,
+                                                          "id": "bef0e8501fcbfb2191e517c1978af33970ff461b",
+                                                          "version": 0
+                                                        },
+                                                        {
+                                                          "type": "View",
+                                                          "weight": 1,
+                                                          "id": "cc45596aa84f5e1f657f123f96a0d055f76ccfe2",
+                                                          "version": 0
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "View",
+                                                      "weight": 1,
+                                                      "id": "c8668eff5c6bb13e5227f70af3edd0e798716458",
+                                                      "version": 0
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "View",
+                                                  "weight": 1,
+                                                  "id": "4cd909518d1a556f842515d59eebc1506359e75e",
+                                                  "version": 0
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "6dc78809a40874fc785c53b64fbba3dbba83c882",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "02550aa35fdd625a989b30d273982ff03532e1e0",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "de3fb974223d5ad329211d88ec126a5e39d95427",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "d1208596b58e7dd1c1cab30d6ab90ee31319ee95",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "36e4a2792de950b9b1e283a47f93f7a0ead25696",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "368487e601e841ae8c971e5f9f71f32f14f339c0",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "fd3cd33d2188013370c97c1697edb9fa9279848a",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "e4f63b49e4073c36381ab5c65558db2f21e70712",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "fa4496978d1ce1c357ccdaad706c7a46b6e94755",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "60044dcabacc2ec82f63d3665b376f705b676857",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "af3d429b5c13b883e26e9466fec83a8a1b61fbe0",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "79b27808cbe6f42632e53aeee9f343ed9a094409",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "0188306c2cb1db3eb5a29681a2fb07fd64440253",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "d137eff8c6f0a21c9cc8a5f59d1bca1c14d5636b",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "cac975e5b2267784824a0bb1f07979bb85d5cc0c",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "1f455029403bcc3f36e5f4a2762e92e3bbaa4223",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "cb0b77c4e313e8ec9691d032cea2de15251574cc",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "137989025ec0b3f879c279ca0ab8658afc3fad60",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "1d6a1dbd9f6fd967d7610b1f686334114644a5d3",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "b6a77e4ec81cd85d46cfd8ee61ca189f9a1123ea",
+                                              "version": 0
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "VStack",
+                                          "weight": 1,
+                                          "id": "a5e6420b1ad5a0906776d7cf50814ecdf7d525c9",
+                                          "version": 20,
+                                          "children": [
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "75f4d33470d40dcc0bf1e5afd7ed213157097018",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "e81b6fda963d3579fe44317d7d76785c6dd9f929",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "88c8fa06cac81877a350c3d95317c256791e1d39",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "fb5c779e16a218b24b2a9c21c7f4dcea75d2fb7e",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "4336942423f9ad822fe957058c9cee4694fa88fd",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "bf9df79a8b96808ac6d35c59faa75efd228ee709",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "fa10463bf7ebeb1de80da2098d10db88f8a6593f",
+                                              "version": 0
+                                            },
+                                            {
+                                              "type": "View",
+                                              "weight": 1,
+                                              "id": "3346584ef297dff38b531f9460d2df8a943d1310",
+                                              "version": 0
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "bbcc9b76f0f8c3037160c755bd71a06677c5dc5a",
+                                      "version": 0
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "7097fcd810655b07cf89b41b3048c1ca2f5ab72e",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Flot",
+                              "weight": 2,
+                              "id": "1ae2c8d60c5aa1b2e4921ef33c1bdd6fd9bdc346",
+                              "version": 8,
+                              "title": "master system load",
+                              "query": "service = \"mesos/system/load_15min\" or\r\nservice = \"mesos/system/load_5min\" or\r\nservice = \"mesos/system/load_1min\"",
+                              "min": null,
+                              "max": null,
+                              "timeRange": 300,
+                              "graphType": "line",
+                              "stackMode": "false",
+                              "tooltips": "metric"
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c1a92dd56128f191aefcd6ef7be4a151cb0a11b5",
+                              "version": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "VStack",
+                  "weight": 1,
+                  "id": "599b3b947e3e75a83efbb6ce784b612b56a7c450",
+                  "version": 444,
+                  "children": [
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "8c2acacb617bd52686cbc9c9f30002ed6640933c",
+                      "version": 3,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "f04ca5990f6652005bd548446d1c064cfa0de2ff",
+                          "version": 1,
+                          "children": [
+                            {
+                              "type": "Title",
+                              "weight": 1,
+                              "id": "3bb1555d214e5e8e7f340094acea5352e31461ac",
+                              "version": 1,
+                              "title": "MEM"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "1d0760a9c2383e27bde143d9b7219ef15abdacb8",
+                          "version": 2,
+                          "children": [
+                            {
+                              "type": "Title",
+                              "weight": 1,
+                              "id": "20e2d67272cbce9620042ea7c4e0b458ac8d2c60",
+                              "version": 1,
+                              "title": "DISK"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "7320ba50e776ae0ac2cb8e9c9a6af76f880b0c5b",
+                      "version": 56,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "78e08232463f205251e847733f292e68e764a6eb",
+                          "version": 49,
+                          "children": [
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "85c2abb9425a6ecfd37a6a3bba59e1e8cd4a5df3",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "d471c03c9adeee7b5e2cbfd3f9722b42f63e8996",
+                              "version": 0
+                            },
+                            {
+                              "type": "Gauge",
+                              "weight": 128,
+                              "id": "d75e0e4726d26de6255630d8cfc6cc7c1eb3b7e7",
+                              "version": 10,
+                              "title": "total mem(MB)",
+                              "query": "service = \"mesos/master/mem_total\""
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "466d9134d4bb651a93b36469ff046ed7d14f25ae",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ca4773d453bda8387d3787d502060ee945687702",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f1962098b663a81a60e4903b0fd5e0eb90dc22c0",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "9cdc59c196cbba076bd1e8c4a573c284bb55fe16",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "64d4656cae7fff40f23af42ff41a49590b57c9e1",
+                              "version": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Gauge",
+                          "weight": 1,
+                          "id": "de85ad3ab79091455b5814ff7b5b5f37a4932f04",
+                          "version": 2,
+                          "title": "total disk(MB)",
+                          "query": "service = \"mesos/master/disk_total\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "641c39a2bb9984feace515c9546115ed0fb79778",
+                      "version": 101,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 1,
+                          "id": "65904dc23abfa812844311fc8fd0de7d0aa18de3",
+                          "version": 95,
+                          "children": [
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "680fba515a64300c953d682bf07ee8b0775145ab",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3eed0127c62964a5c10ff96e0c33144d77215df8",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "0e1c614d9d4d2103e1f77c8a97dd39d0582b197e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "72924309d1d247a35b9e181a8c5a09e8cda31a3b",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "d3b40bfa742d849de1d64bc3ea2dc78e5c6a1281",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "7f9698adbf5d98c73b1781233d93bb2e8655111a",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "af9703dce5ed98c7b0d75baad61df9221f6d686e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6e3f171320a8b1be4b7f7d519b0fdc40d0987464",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "5446d5dd4dac37f1fbd4ee31beb0a9df0b49c887",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "09bd9c67dca1cdc760d580dcddd8c51d902d4021",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "91f4a7300d9322d6e1038b943bdd61537a076798",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1312d2d17c65da5f99a7a7283845d1be5030baeb",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "dbbd605ae548f1ccb4517f6cabc731d499557a91",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "58b493b57adcdfede7d321a2a36180cb085e0aea",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "93d1774b0929c67a0dead28cb0f3a872ef10ba09",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "0d9acea47c6de2453be9ea09ff54f20608ec3aea",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c0f42f4fbbf9ef3c0d49daafd98619e35d9a4c6c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "9469dcad8b6338cef78a2b4faf0018142ac571c9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6e4d3ac7bf6a0c6fcaa03c1ceb01ea7247f4f510",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "b5971820773cd191f093480c5a0fac4ed83b9944",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6c0574c6b5a7eac42b0aacabe3b971c893146113",
+                              "version": 0
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 32768,
+                              "id": "9c31f93674178083ab1c3978d05e64e9a968b547",
+                              "version": 53,
+                              "children": [
+                                {
+                                  "type": "Gauge",
+                                  "weight": 1024,
+                                  "id": "3444a04b74f0449eaceed1f2276c5a61fe860f23",
+                                  "version": 56,
+                                  "title": "used mem(MB)",
+                                  "query": "service = \"mesos/master/mem_used\""
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "0ef6bd0c9c01a35ae0d1a72250db965d42b479bc",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "3975e39ed2f0b5652342f38cd7b4a5c97be21da8",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "ba2a6b3a0e234f2e0c13b6e94ebc1ace530d2f79",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "b87b523ac236247a2464037a9c68fb916cba10d1",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "4b09fc80b889226d6030fa32752a23b850add3ad",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "db9c548395568182b77bef2a398a447c25b8cb54",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "df48df2e25479f4e77a21e45ff2d1a99a366f50f",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "61e0bd5c8fce7bb7d7ebbd282fcaae95fd85a186",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "90d981fc98640f437dbb76b9fe40853a76469476",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "9cf3aa682644af8f4ad9faef5aadb3834883f67c",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "b688a6f413d6172394e56334a81a614290ec7605",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "e04ebb0c2bd89d3aa32bef00292c831659a0b4d0",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "ed017d1a8de1215ff6220b99faaf01606c80b7b1",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "52ed863b2bf326d4a544496d34e42fe8c29791a8",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "7933d0d0d15c77e8bf0f0e54e42b13e1efdb740f",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "0455fcbc05d0f461ab77e26f5acedc9a2687b076",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "3f0118c73b153ab3df3a8356afffe1512c6d18f7",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "8361ebd8c97a5862ee2a7c273b100f4441b2f374",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "2fcf04dcf84c743a1d2869b6e46288ee543da051",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "a611950133f4256215a4d7fb46aad193578f6197",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "bbe679d7cb04f4f7218444feb64effb2069d780c",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "2468b1829b458fa948336850d0e69e83594ac8c1",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "bf9fee93db0567d7659d0e5fd441d35a642bd1c9",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "aa873933a41775efa189557d7c10782f82808303",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "6c3ae5ce7260518edb982e683c2952d9fb25ba2a",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3977d4d5b055df5affffc790a509ed7dcf62d3c9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "afdaa0b82ef5627cef69c2ad121e24539dc15046",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "049448ba9170d2b60609f8572e4dc29afeacd3f2",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f04c5bd14a9090598112e8f49233cf6ed85a09d0",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "7175139faed2806d1fd42df2db4fd53d5697957d",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3d20452222112adc4521251db374d0f3c90f6041",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "748f4a402f80164ed6377c5fdf3ee976d98491cb",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "81f83f8d577663c637991cf2772bc6c4b29d15cf",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1b78498c896c88f6f8f3e7c04594c03c0ed81762",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1e0da26b57ee93f29c99e7c0b6057bdaa27f9d8c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "d9010e34387b3b8ee3b38807627a94be84ad735d",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "184205045f4e8676e816d76541c53d999abdd387",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6bdfae2b09a28de8f3f1f5e1e2224750f3432595",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "47d7ff7d44b01535db0ba0087091ba84aff3746f",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c11de1c356afd54c4de67f871c7ca52e3f9a706a",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "b1a93196b83b97ec7528750515bc6254cca6bad2",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ab387f79e6cf406e9962628cbd7066fda2934712",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "826911e3b085a125de9b4b37167caca321b0d404",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "b7458b5838ba6588395d82c0606fd87ba4f68fbc",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "932cf659838d3707d9931f28d4b8e79bf673eeb7",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "39fbce30f0368b2355af6b999e10b51a72510323",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1389e34a948da3195ce7895472cd54f1f607bbeb",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "7ec7660d76bad041fb7891893a27b4b66e461064",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "7752a82de30abc8122f43c75859b2200683f3dd9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c2f8cdfdb1e77d1f5c43de3cb41599a26a5d3a22",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "cd1ea5f8fba29a74e48b358e707a22df28e1fe95",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "855f06143b5db7818602f020ff6811282b9ab470",
+                              "version": 0
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 1,
+                              "id": "628d82170f9243e6faf8392535ffa44da4bd5835",
+                              "version": 10,
+                              "children": [
+                                {
+                                  "type": "VStack",
+                                  "weight": 1024,
+                                  "id": "b515212cd8d6f21e03b8777637daf3bdce948cb8",
+                                  "version": 0,
+                                  "children": [
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "54d5215c67b5325244b2edd21059bb3a61e17ad6",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "ce1b340fc8e169309bec38af72a8ab10524b92ca",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "c377811f3a1f397076c20323e2fc2b3357a0019c",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "6fbf93d708f38557c48c2b2626f849e427d2acf4",
+                                      "version": 0
+                                    },
+                                    {
+                                      "type": "View",
+                                      "weight": 1,
+                                      "id": "007b10e8cdda9225d7047563486b17f552553c7d",
+                                      "version": 0
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "715337818da611d0c7704a1e700fdd51c0f787fb",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "aa26ff81cb987a9cc4bdf4e4cef3e99d74f898e2",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "bab0340c7e5de264916a474e527bd1e6dc3aa131",
+                              "version": 0
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 256,
+                              "id": "0ca83569a30c86a142305e679c469caeffa99e9e",
+                              "version": 0,
+                              "children": [
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "5dd2eda435fb3bab9dfd3506b8c8089c29e9fa66",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "16c1d02d5709e3622fa91ce41b85412be5481199",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "951f26a6b595baa37ae3663e798748b41ce93a13",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "b026fb6a47feb584025f63213cbbf14f84a7cc3c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "0322e387393876788fab096c525a6e2bcd6d3b7e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4c50b5cf2bde7dfacffa6bb7b044a3c4fb7baba5",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c27ec80cac6ca75426844cac4083fed8bf1316c1",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ffb8e70d68e0c6f4ec8a0ed4d5e1f131af4b951f",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "98c2e9f881d68cc1d3839b0f94fe7b35ceb7c1eb",
+                              "version": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Gauge",
+                          "weight": 1,
+                          "id": "9ff9f4208dfbb6d174997863a811044f80e466e4",
+                          "version": 2,
+                          "title": "used percent",
+                          "query": "service = \"mesos/master/mem_percent\""
+                        },
+                        {
+                          "type": "Gauge",
+                          "weight": 1,
+                          "id": "556e11fcf77e18724eea9b2a246add50d9f424c7",
+                          "version": 2,
+                          "title": "used disk(MB)",
+                          "query": "service = \"mesos/master/disk_used\""
+                        },
+                        {
+                          "type": "Gauge",
+                          "weight": 1,
+                          "id": "d5efca4a87780b690ad82ca865ab7ffeebd309b3",
+                          "version": 2,
+                          "title": "used percent",
+                          "query": "service = \"mesos/master/disk_percent\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "2bc4d023b83c24ca0a0c4006d43dbbf6c63b9f1f",
+                      "version": 167,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 4,
+                          "id": "ec7a47188b3eac84c10a2b2452310a8542e5282f",
+                          "version": 165,
+                          "children": [
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "cd276b795bd64f7348cdc5656cd3a660ca387411",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "1b75ec883e7dcb53481ee00d72b68931ccec70f0",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f8d946000e2c614d523b960e75e70c4875551e64",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "f9bd33832f830976e008062ac704b5d05a901d29",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "098667ed8c148f518b9ab181e9ff2ef71f82deb2",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "909f5475c75e42e3822e2fcaceca24ed4716050e",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "94c83cb38d5e6ceadc1165e0c4503ff1541f37ea",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "17e471fdc88ac027fd092d70529bf17e1baf917f",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "66a6e6cf8fd56bbe89c0854cda05bfc50e0810b6",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "84cb757c5e0ec57c6210509ec838d9c9429ecfa2",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "5e3cca69ec7d5acdc977eefeb2b590582fb42c56",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "63b2952af71543af08e872029aa928286fd461b9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "153cf28f087d9a1dad75a69987fd3c0bb66d29ef",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "bb1ad2e446fd5803ed3e71b139b28c640055f81c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "02eb29964714e2ad2b5744b0e9933ff725fd09e4",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "4d6c384ded4eb5e1311416503c732d4c4b8c7385",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "00e69563c3aa631c14bbe5cce6f5fab294327d25",
+                              "version": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "f161a94b10fa39254069a00aa66e90f035c391b8",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "a0a5b96719fcb60b3a1e7215d22118694f76e77f",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "844c19c431ea9d29a6526badd5e8f63ae23e0b0c",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "7da03d16871d46569072cf57c3c7246f9ecec47d",
+                          "version": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "HStack",
+                      "weight": 1,
+                      "id": "c4e11efc52df3a4447b6baf3824c7b575138ffc6",
+                      "version": 92,
+                      "children": [
+                        {
+                          "type": "VStack",
+                          "weight": 8,
+                          "id": "202ccc8657c0e67e0a9ae92596ebafe7c975975d",
+                          "version": 50,
+                          "children": [
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "c96553eaf972956e4f6378285eaccea9b63f6180",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "28517d81f42d4372e8f472dbe5cb0fa42e37c7a9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "e7f87460d9060ff97064d45258f2b15ced09bb95",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "19ae2ceb1d0b1ebfb6d26bdbd8840c4527f92793",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ba25873dc61217db8fd0e4832bdd561c0d85bbed",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "45694356670be111b26f6850cf16ede8a2546e77",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "3021c727b6b3c459d3532ac53359135bab14b270",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "44a41d182f22f87ce15bb6e9b150dbc91e14cf99",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "55d8989a066b70397643226ca57dab279f38ed9c",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "76d3efca8d3dfb845717a33616ffa0b543880ebe",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "75e5eb6df311f4d5d871d2f4a8fcf69cbaa186f9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ead5481072ae89cca52cdd13e898a15936232b1a",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "39ac4b77e7b0093ec8b502619b932fad6bd44a3f",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "14d415ff9d464640ee35341236e2617366d7ce0a",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "95487571b6410ad9a1bf70d4f10ef07f90826a21",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "12f498c45fa1f5b8a393d2ef0a3cda7728ec4301",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "d904bc6977d55cecd7155eb341d19ed25301f3a8",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "b37d6ebbd9c28a5cd6eb4da3c03525cc5f8f3642",
+                              "version": 0
+                            },
+                            {
+                              "type": "HStack",
+                              "weight": 268435456,
+                              "id": "90f3253c281eceba634c0f2b30aec713e11dbcb6",
+                              "version": 22,
+                              "children": [
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "3f7aac8f047798ead6b4664d0d0490e3ddfe8f12",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "adfb52988dcd8b9606bfeecc14cc23a454717ef8",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "7ff843bf73c7cf07609bfeaf22941405dd36abab",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "4eae12c9be0c7926fa1386f06708dbda5b6948e6",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "e23647bcfa4086e9e99d7ae0170d12cdd4b55749",
+                                  "version": 0
+                                },
+                                {
+                                  "type": "View",
+                                  "weight": 1,
+                                  "id": "21b6deb6fa5d06ebacfb6d56b18e71e84a684ca3",
+                                  "version": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "e4f628dc40217ddb6d38d0e07cef2e94ce8e1aab",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "6a6bbfe6cd0c61864e606b1af78db97da3908754",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "21723fefec09eecabc07be3cea701d4ca2c81fa9",
+                              "version": 0
+                            },
+                            {
+                              "type": "View",
+                              "weight": 1,
+                              "id": "ceded3ed8f3ee52e23a76613f90aa1545a791479",
+                              "version": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "c4226fe8f00f8bb59de39aee675de62cf908394f",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "3f85c858513a6c3b99d2895ea3354ec4fd8b3b9e",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "5c1cd0378ad58e6c954cbd5f4723ee33a2f2399e",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "593446c5668ad65f8e82fa21d2c666897d37a51b",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "83daea7a27a9cdb0beca01855f48a35c6b1859c1",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "f893d333bad6532ed17949f7beac55a658596b1a",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "150c70b46a5f8ae3a988afd3e809a912724d625f",
+                          "version": 0
+                        },
+                        {
+                          "type": "View",
+                          "weight": 1,
+                          "id": "af62687668f79840a61a7623913a2574e8268dbc",
+                          "version": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "a84cd1414192df6dc6ca83e9cc6148de0ccd8aee",
+                      "version": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "VStack",
+                  "weight": 0.125,
+                  "id": "495502ec6360fc01d9f4545e5ff27e3e82f5910b",
+                  "version": 4,
+                  "children": [
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "a8446708ccc17ee562133aba7d2a2cc67864d04e",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "0bc3e31981e0c43e42a6d6ee712ae019c06e62be",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "8f22c7e5d8ddfce7f53fd4666c6c86032ece9bc5",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "56e9ab9c51f1ffc8009216b0241d05815e404f8b",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "920ab78dcb96831547ad4b116c3ed9c07a2d6242",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "f19bfc55e3293b134f8a8452e0ffe50fc6c5a635",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "5d84248e3a5aea87b7edab379ab6cee997aa338d",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "fcdff4af8b07125925f4bb898395a209e0f1cdea",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "4c7c649aaf2ae8609ca1a528c8596327165d0213",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "5b3eab9820412d8c7c639fffa84f3007d3fd71e3",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "c92fe362f9d7616efc8e04ccd5b26c3fe1d63391",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "2bc39c6759035b0ea7a4fe1af380e3ae516609dc",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "50ead198904eb78f6fced4141eb3b6c1d11a882e",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "80f43a827cef33eb5018e9e0e0501ed16e63212d",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "496e8522390519a3a1de66063afc01aa647fafc1",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "0b554ad81ed82a34db70ed0e51881717f5a94e32",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "f08a1342ce3a62dad48b3602856b2a2f632e9184",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "6206924777719a9f1f4a4288a4812394950023ee",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "cca936d287d46db0e0eea42994187a6b7432db43",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "799539538ee8e6b47f0ff3dcfd2a29ea8432b0cd",
+                      "version": 0
+                    },
+                    {
+                      "type": "View",
+                      "weight": 1,
+                      "id": "421c9423891d9347737a4bf49027a93bbd5d7af5",
+                      "version": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "a766496346254e26a9376b3b6e2d21a1b5833ff9"
+    },
+    {
+      "name": "Help",
+      "view": {
+        "type": "Balloon",
+        "weight": 1,
+        "id": "e69cdf181ff7e6fbbcb94081da303d803837c575",
+        "version": 0,
+        "child": {
+          "type": "VStack",
+          "weight": 1,
+          "id": "4531dd5970484d42fd076a3630cde332630b5ad2",
+          "version": 0,
+          "children": [
+            {
+              "type": "Help"
+            }
+          ]
+        }
+      },
+      "id": "1e3020a05e09edc3f75d33bf680c0ea8b09c41e0"
+    }
+  ]
+}
